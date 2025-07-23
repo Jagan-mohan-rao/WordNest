@@ -28,7 +28,7 @@ function Home() {
 
     if (selectedRole === "author") {
       res = await axios
-        .post("http://localhost:3000/author-api/author", currentUser)
+        .post("${import.meta.env.VITE_API_BASE_URL}/author-api/author", currentUser)
       let { message, payload } = res.data;
       if (message === 'author') {
         setcurrentUser({ ...currentUser, ...payload })
@@ -42,7 +42,7 @@ function Home() {
     }
     if (selectedRole === 'user') {
       res = await axios
-        .post("http://localhost:3000/user-api/user", currentUser)
+        .post("${import.meta.env.VITE_API_BASE_URL}/user-api/user", currentUser)
       let { message, payload } = res.data;
       if (message === 'user') {
         setcurrentUser({ ...currentUser, ...payload })
@@ -62,7 +62,7 @@ function Home() {
       }
 
       res = await axios
-        .post("http://localhost:3000/admin-api/login", { email: currentUser.email })
+        .post("${import.meta.env.VITE_API_BASE_URL}/admin-api/login", { email: currentUser.email })
       let { message, payload } = res.data;
       if (res.data.message === 'admin') {
         setcurrentUser({ ...currentUser, ...res.data.payload });

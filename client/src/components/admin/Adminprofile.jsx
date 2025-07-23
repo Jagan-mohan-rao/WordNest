@@ -12,7 +12,7 @@ function Adminprofile() {
   useEffect(() => { // Hook 4 (must be called unconditionally)
     // Only make the API call if the user is an admin
     if (currentUser && currentUser.role === 'admin') {
-      axios.get('http://localhost:3000/admin-api/all-users')
+      axios.get('${import.meta.env.VITE_API_BASE_URL}/admin-api/all-users')
         .then(res => setUsers(res.data.payload))
         .catch(() => setError('Failed to fetch users'));
     }
@@ -26,7 +26,7 @@ function Adminprofile() {
   // Toggle active status
   const toggleActive = async (id, isActive) => {
     try {
-      const res = await axios.put(`http://localhost:3000/admin-api/toggle-active/${id}`, { isActive: !isActive });
+      const res = await axios.put(`${import.meta.env.VITE_API_BASE_URL}/admin-api/toggle-active/${id}`, { isActive: !isActive });
       setUsers(users.map(u => u._id === id ? { ...u, isActive: !isActive } : u));
     } catch {
       setError('Failed to update status');

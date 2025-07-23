@@ -48,7 +48,7 @@ function ArticleById() {
     articleAfterchanges.dateOfModification=currentDate.getDate()+'-'+currentDate.getMonth()+'-'+currentDate.getFullYear()
 
     //make http request to save the edited article
-    let res=await axios.put(`http://localhost:3000/author-api/article/${articleAfterchanges.articleId}`, 
+    let res=await axios.put(`${import.meta.env.VITE_API_BASE_URL}/author-api/article/${articleAfterchanges.articleId}`, 
       articleAfterchanges,
       {
         headers:{
@@ -72,7 +72,7 @@ function ArticleById() {
   //to delete articles
   async function deleteArticle(){
     state.isArticleActive=false
-    let res=await axios.put(`http://localhost:3000/author-api/articles/${state.articleId}`,state)
+    let res=await axios.put(`${import.meta.env.VITE_API_BASE_URL}/author-api/articles/${state.articleId}`,state)
     if(res.data.message==='article deleted or restored'){
       setCurrentarticle(res.data.payload)
     }
@@ -81,7 +81,7 @@ function ArticleById() {
   //to restore articles
   async function restoreArticle(){
     state.isArticleActive=true
-    let res=await axios.put(`http://localhost:3000/author-api/articles/${state.articleId}`,state)
+    let res=await axios.put(`${import.meta.env.VITE_API_BASE_URL}/author-api/articles/${state.articleId}`,state)
     if(res.data.message==='article deleted or restored'){
       setCurrentarticle(res.data.payload)
     }
@@ -93,7 +93,7 @@ function ArticleById() {
     console.log('commentobj is :',commentObj)
 
     // http rewq
-    let res = await axios.put(`http://localhost:3000/user-api/comment/${currentarticle.articleId}`,commentObj)
+    let res = await axios.put(`${import.meta.env.VITE_API_BASE_URL}/user-api/comment/${currentarticle.articleId}`,commentObj)
     if(res.data.message==='Comment added'){
       setcommentstatus(res.data.message)
       setCurrentarticle(res.data.payload); 

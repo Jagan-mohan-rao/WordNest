@@ -22,7 +22,7 @@ function Articles() {
   async function getArticles() {
     try {
       const token = await getToken();
-      const res = await axios.get("http://localhost:3000/author-api/articles", {
+      const res = await axios.get("${import.meta.env.VITE_API_BASE_URL}/author-api/articles", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -50,7 +50,7 @@ function Articles() {
     try {
       const token = await getToken();
       const res = await axios.put(
-        `http://localhost:3000/author-api/restore-article/${articleObj.articleId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/author-api/restore-article/${articleObj.articleId}`,
         {},
         {
           headers: {

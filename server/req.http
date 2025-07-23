@@ -1,5 +1,5 @@
 ### create author
-POST http://localhost:3000/author-api/author
+POST ${import.meta.env.VITE_API_BASE_URL}/author-api/author
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ###create user
-POST http://localhost:3000/user-api/user
+POST ${import.meta.env.VITE_API_BASE_URL}/user-api/user
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 
 ###post new article
-POST http://localhost:3000/author-api/article
+POST ${import.meta.env.VITE_API_BASE_URL}/author-api/article
 Content-Type: application/json
 
 {
@@ -49,16 +49,16 @@ Content-Type: application/json
 
 
 ### Read all articles by user
-GET http://localhost:3000/user-api/articles
+GET ${import.meta.env.VITE_API_BASE_URL}/user-api/articles
 
 
 ### Read all articles by author
-GET http://localhost:3000/author-api/articles
+GET ${import.meta.env.VITE_API_BASE_URL}/author-api/articles
 
 
 
 ### edit article by id
-PUT http://localhost:3000/author-api/article/1750083244
+PUT ${import.meta.env.VITE_API_BASE_URL}/author-api/article/1750083244
 Content-Type: application/json
 
 {   
@@ -79,7 +79,7 @@ Content-Type: application/json
 }
 
 ### post comment by article id
-PUT http://localhost:3000/user-api/comment/1750083378
+PUT ${import.meta.env.VITE_API_BASE_URL}/user-api/comment/1750083378
 Content-Type: application/json
 
 {
@@ -89,7 +89,7 @@ Content-Type: application/json
 }
 
 ### delete atricle by article id(soft-delete) which will be deleted to user but can restore by author 
-PUT http://localhost:3000/author-api/articles/1750083244
+PUT ${import.meta.env.VITE_API_BASE_URL}/author-api/articles/1750083244
 Content-Type: application/json
 
 {   
@@ -112,7 +112,7 @@ Content-Type: application/json
 
 ### admin
 ###create admin
-POST http://localhost:3000/admin-api/admin
+POST ${import.meta.env.VITE_API_BASE_URL}/admin-api/admin
 Content-Type: application/json;
 
 {
