@@ -1,0 +1,49 @@
+.article-page-container {
+  max-width: 1250px;
+  margin: auto;
+  margin-bottom: 40px;
+  /* padding: 1rem; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(255, 215, 0, 0.12);
+}
+
+.gradient-title {
+  background: linear-gradient(90deg, #facc15, #ffffff, #1e3a8a);
+  font-size: 3rem;
+  font-weight: bold;
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+.text-gold {
+  color: #facc15;
+}
+
+.article-content {
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  white-space: pre-line;
+
+}
+.a-btn{
+    font-size: 1.4rem;
+}
+
+.a-btn:hover{
+    font-size: 1.6rem;
+}

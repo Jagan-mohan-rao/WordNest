@@ -1,0 +1,108 @@
+.author-details{
+    border-bottom: 1px solid rgba(111, 111, 111, 0.9);
+}
+.articles-container {
+  /* background: linear-gradient(to bottom right, #012a4a, #023e8a, #03045e); */
+  padding: 0 1rem;
+  min-height: 100vh;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.travel-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: #fb8500;
+  overflow: hidden;
+  position: relative;
+}
+
+.travel-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.travel-btn {
+  background: linear-gradient(135deg, #fb8500, #fcd34d);
+  border: none;
+  color: #0a0a2a;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.travel-btn:hover {
+  background: linear-gradient(135deg, #fcd34d, #fb8500);
+  
+  color: #0a0a2a;
+  transform: scale(1.05);
+}
+
+.gradient-title1 {
+  background: linear-gradient(45deg, #dfb301, #ffffffde, #0cd7e6,#0a0a2a);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s ease infinite;
+  font-weight: bold;
+}
+.footart{
+    font-size: 0.83rem;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.faded {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(70%);
+}
+.category-dropdown {
+  border: 1px solid #c9a464;
+  background: transparent;
+  color: #fff458;
+  border-radius: 8px;
+  padding: 5px 12px;
+  width: 190px;
+  font-weight: 500;
+  margin-right: 6px;
+}
+.op{
+  background:#0b1d42 ;
+
+ 
+}
+
+.category-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+

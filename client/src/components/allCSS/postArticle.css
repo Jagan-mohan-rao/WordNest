@@ -1,0 +1,115 @@
+:root {
+      --primary: #ffb703;
+      --secondary: #fb8500;
+      --navy: #0a0a2a;
+      --deep-blue: #1e3a8a;
+      --glass-bg: #ffffff0d;
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .body {
+      font-family: 'Poppins', sans-serif;
+      /* background: linear-gradient(to bottom right, #0a0a2a, #0f172a); */
+      color: #facc15;
+      min-height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card1 {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      margin-top: 20px;
+      padding: 2.5rem 3rem;
+      /* min-height: 85vh; */
+      max-width: 690px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.12);
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .card1 h1 {
+      font-size: 2rem;
+      margin-bottom: 2.4rem;
+      background: linear-gradient(90deg, #facc15, #ffffff, #1e3a8a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+
+    .card1 form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      color: #fff;
+    }
+
+    input, select, textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      color: #d7cf7b;
+      font-size: 1rem;
+      outline: none;
+    }
+    .cat{
+        color:#1c023e;
+        background: #ffb8037f;
+    }
+    .options{
+        color: #d5ae15;
+        /* font-weight: 550; */
+        background: #0a0a2ad2; 
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 220px;
+    }
+
+    .buttn {
+      padding: 0.8rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border: none;
+      border-radius: 10px;
+      color: #1c023e;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .buttn:hover {
+      background: linear-gradient(to right, var(--secondary), var(--primary));
+      transform: scale(1.03);
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 2rem;
+      }
+    }
+    

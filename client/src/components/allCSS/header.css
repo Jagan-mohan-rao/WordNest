@@ -1,0 +1,88 @@
+.header{
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+} 
+
+.logo a{
+      /* font-family: 'Font Awesome 6 Free'; */
+      color: #f59e0b;
+      font-size: 2.5rem;
+      margin-left: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 2rem;
+      /* margin-left: 20; */
+      font-weight: bold;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #f59e0b, #17eef1, #d863c4,#ebd803);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: colorFlow 6s ease infinite;
+      margin-left: 130px;
+      text-decoration: none;
+      cursor: pointer;
+}
+@keyframes colorFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.nav-header{
+    width: max-content;
+    font-size: 1.3rem;
+    margin-right: 80px;
+    gap: 20px;
+   
+}
+.nav-header a{
+    text-decoration: none;
+    color: #f59e0b;
+    padding: 6px 12px;
+    margin-left: 10px;
+    border: 1px solid #e0be00;
+    display: block;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
+    font-weight: 550;
+}
+.nav-header a:hover{
+    background-color: #f59e0b;
+    color: #18053b;
+}
+.nav-header .signup{
+    background: linear-gradient(to right, #f59e0b, #facc15);   
+    color: #18053b;
+    border: 1px solid #e0be00;
+    font-weight: 600;
+    transition: 0.3s;
+    
+}
+.nav-header .signup:hover{
+     background: linear-gradient(to right, #facc15, #f59e0b);
+     transition: ease-in 1s;
+}
+.signout-btn{
+    background: none;
+    border-bottom:2px solid red ;
+    border-radius: 20px;
+    border-right: chocolate;
+   
+    color: rgb(255, 0, 0);
+}
+.signout-btn:hover{
+    background: none;
+    border: 2px solid red;
+    /* border-radius: 0px; */
+    padding: 0.5rem 1rem;
+    font-size: 2.4rem;
+    color: red;
+    transition: 0.3s;
+}
+.search-input::placeholder {
+  color: #fef08a;
+}

@@ -1,0 +1,50 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bgcol: linear-gradient(135deg, #0b1d42, #11101d);
+  --Ocol:#f59e0b;
+  --ycol:#e0be00;
+  --navycol:hsl(261, 84%, 13%);
+  --footerbg:rgba(11, 29, 66, 0.25);
+  --primary: #ffb703;
+      --secondary: #fb8500;
+}
+
+body {
+      font-family:  Verdana, Geneva, Tahoma, sans-serif;
+      /* background: linear-gradient(135deg, #14033a, #15091f); */
+      background: linear-gradient(135deg, #0b1d42, #11101d);
+      /* color: #f59e0b; */
+
+}
+/* button{
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border: none;
+      border-radius: 10px;
+      color: #1c023e;
+} */
+input::placeholder {
+  color: #facc15; /* golden-yellow */
+  opacity: 1;     /* optional: makes it fully visible */
+  font-weight: 500;
+}
+select {
+  background-color: transparent;
+  color: #facc15; /* example text color */
+  border: 1px solid #facc15; /* optional border */
+  padding: 0.5rem;
+  border-radius: 6px;
+  appearance: none; /* removes native dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+option{
+      background: #000;
+      backdrop-filter: blur(16px);
+      
+}
