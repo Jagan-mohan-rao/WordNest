@@ -45,7 +45,7 @@ function PostArticles() {
     // This could involve sending the articleObj to a server or API
     console.log("Article posted:", articleObj);
     
-    let res= await axios.post("${import.meta.env.VITE_API_BASE_URL}/author-api/article",articleObj);
+    let res= await axios.post(`${import.meta.env.VITE_API_BASE_URL}/author-api/article`,articleObj);
     if(res.status===201){
       alert("Article posted successfully!");
       navigate(`/AuthorProfile/${currentUser.email}/Articles`);

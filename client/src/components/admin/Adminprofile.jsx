@@ -12,7 +12,7 @@ function Adminprofile() {
   useEffect(() => { // Hook 4 (must be called unconditionally)
     // Only make the API call if the user is an admin
     if (currentUser && currentUser.role === 'admin') {
-      axios.get('${import.meta.env.VITE_API_BASE_URL}/admin-api/all-users')
+      axios.get(`${import.meta.env.VITE_API_BASE_URL}/admin-api/all-users`)
         .then(res => setUsers(res.data.payload))
         .catch(() => setError('Failed to fetch users'));
     }

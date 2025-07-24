@@ -22,7 +22,7 @@ function Articles() {
   async function getArticles() {
     try {
       const token = await getToken();
-      const res = await axios.get("${import.meta.env.VITE_API_BASE_URL}/author-api/articles", {
+      const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/author-api/articles`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -83,6 +83,7 @@ function Articles() {
 
   return (
     <div className="articles-container">
+
       {error.length !== 0 && (
         <p className="text-danger text-center fs-1">{error}</p>
       )}

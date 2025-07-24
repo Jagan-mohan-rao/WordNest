@@ -27,8 +27,9 @@ function Home() {
     let res = null;
 
     if (selectedRole === "author") {
+      // console.log("API Base URL:", import.meta.env.VITE_API_BASE_URL);
       res = await axios
-        .post("${import.meta.env.VITE_API_BASE_URL}/author-api/author", currentUser)
+        .post(`${import.meta.env.VITE_API_BASE_URL}/author-api/author`, currentUser)
       let { message, payload } = res.data;
       if (message === 'author') {
         setcurrentUser({ ...currentUser, ...payload })
@@ -38,11 +39,11 @@ function Home() {
       else {
         seterror(message);
       }
-      console.log(currentUser)
+      // console.log(currentUser)
     }
     if (selectedRole === 'user') {
       res = await axios
-        .post("${import.meta.env.VITE_API_BASE_URL}/user-api/user", currentUser)
+        .post(`${import.meta.env.VITE_API_BASE_URL}/user-api/user`, currentUser)
       let { message, payload } = res.data;
       if (message === 'user') {
         setcurrentUser({ ...currentUser, ...payload })
@@ -62,7 +63,7 @@ function Home() {
       }
 
       res = await axios
-        .post("${import.meta.env.VITE_API_BASE_URL}/admin-api/login", { email: currentUser.email })
+        .post(`${import.meta.env.VITE_API_BASE_URL}/admin-api/login`, { email: currentUser.email })
       let { message, payload } = res.data;
       if (res.data.message === 'admin') {
         setcurrentUser({ ...currentUser, ...res.data.payload });
