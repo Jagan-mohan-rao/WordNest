@@ -12,6 +12,8 @@ function Signin() {
          
       </div>
       <SignIn
+      routing="path" // <-- ADD THIS PROP
+        path="/Signin" 
        appearance={
         {
           elements: {

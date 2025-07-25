@@ -56,7 +56,9 @@ function Home() {
 
     }
     if (selectedRole === 'admin') {
+        
       const allowedAdminEmails = ["23071a6927@vnrvjiet.in"];
+
       if (!allowedAdminEmails.includes(currentUser.email)) {
         seterror("You are not authorized as admin.");
         return;
