@@ -7,8 +7,7 @@ function Signup() {
     <div  className='container d-flex justify-content-center align-items-center   'style={{marginTop:"150px"}}>
       
       <SignUp
-      routing="path" // <-- ADD THIS PROP
-        path="/Signup" 
+      
        appearance={
         {
           elements: {
