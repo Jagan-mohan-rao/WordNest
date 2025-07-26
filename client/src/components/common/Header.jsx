@@ -74,10 +74,10 @@ function Header() {
                 <Link to="">Home</Link>
               </li>
               <li>
-                <Link to="signin">SignIn</Link>
+                <Link to="Signin">SignIn</Link>
               </li>
               <li>
-                <Link to="signup" className='signup'>Signup</Link>
+                <Link to="Signup" className='signup'>Signup</Link>
               </li>
             </>
           )}
